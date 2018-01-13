@@ -1,0 +1,33 @@
+name: Wild
+main: com.akaiha.wild.Wild
+version: 1.1.2
+load: STARTUP
+prefix: Wild
+author: Akaiha
+description: Server side permissions handler.
+
+commands:
+  wild:
+    description: Wilderness Command.
+    
+permissions:
+  wild.*:
+    default: op
+    description: op perm
+    children:
+      wild: true
+      wild.others: true
+      wild.override: true
+      wild.others.override: true
+      wild.reload: true
+  wild:
+    default: true
+    description: base perm
+  wild.others:
+    description: wild others
+  wild.override:
+    description: override set min and max
+  wild.others.override:
+    description: override set min and max
+  wild.reload:
+    description: reload config
